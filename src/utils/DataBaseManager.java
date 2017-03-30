@@ -101,19 +101,19 @@ public class DataBaseManager {
     }
 
 
-    @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
-        System.out.println("Finalize executed");
-        try {
-            con.close();
-        } catch (SQLException se) { /*can't do anything */ }
-        try {
-            stmt.close();
-        } catch (SQLException se) { /*can't do anything */ }
-        try {
-            rs.close();
-        } catch (SQLException se) { /*can't do anything */ }
-    }
+//    @Override
+//    protected void finalize() throws Throwable {
+//        super.finalize();
+//        System.out.println("Finalize executed");
+//        try {
+//            con.close();
+//        } catch (SQLException se) { /*can't do anything */ }
+//        try {
+//            stmt.close();
+//        } catch (SQLException se) { /*can't do anything */ }
+//        try {
+//            rs.close();
+//        } catch (SQLException se) { /*can't do anything */ }
+//    }
 
 }

@@ -50,13 +50,12 @@ public class RozetkaTests {
                 .openThirdPage()
                 .setToDbTopSaleItemsNamesAndPrices(RUN_ID);
 
-        new DataBaseManager().printAllInDataBase();
+//        new DataBaseManager().printAllInDataBase();
     }
 
     @Test
     public void someTest(){
-        new StringHelper().getCurrentTime();
-
+        System.out.println("Second Test");
     }
 
 

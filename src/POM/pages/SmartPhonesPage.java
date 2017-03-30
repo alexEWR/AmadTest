@@ -4,6 +4,7 @@ import configs.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.DataBaseManager;
+import utils.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +46,9 @@ public class SmartPhonesPage extends BasePage{
                         "//div[@class='g-price-uah']")).getText();
                 String name = getElement(By.xpath("//div[@class='g-i-tile g-i-tile-catalog'][.//i[@class='g-tag g-tag-icon-middle-popularity sprite']]["+(i+1)+"]" +
                         "//div[@class='g-i-tile-i-title clearfix']")).getText();
+
                 new DataBaseManager().insertInDataBaseSmatrphones(name, price, runId);
+                Logger.INFO("Row added to DB with name: "+name+" price: "+price);
             }
         }
         return this;
