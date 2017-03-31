@@ -53,10 +53,5 @@ public class RozetkaTests {
 //        new DataBaseManager().printAllInDataBase();
     }
 
-    @Test
-    public void someTest(){
-        System.out.println("Second Test");
-    }
-
 
 }
