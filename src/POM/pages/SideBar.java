@@ -9,7 +9,7 @@ import org.openqa.selenium.TimeoutException;
  */
 public class SideBar extends BasePage {
 
-    private static final By TELEFONY_TV_I_ELECTRONIKA_LOCATOR = By.xpath("//a[@data-title='Смартфоны, ТВ и электроника']");
+    private static final By TELEFONY_TV_I_ELECTRONIKA_LOCATOR = By.xpath("//li[@menu_id='3361']/a");
     private static final By HOVERED_MENU_LOCATOR = By.xpath("//nav[@class='m-main m-menu-btn-hover hover-layer']");
 
     public SideBar() {
