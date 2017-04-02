@@ -1,7 +1,7 @@
 package POM.pages;
 
 import POM.elements.CustomElement;
-import configs.WebDriverManager;
+import utils.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.Logger;

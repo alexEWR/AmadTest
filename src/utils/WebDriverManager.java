@@ -1,9 +1,11 @@
-package configs;
+package utils;
 
 /**
- * Created by Alex on 29.03.2017.
+ * Created by Alex on 30.03.2017.
  */
 
+import configs.Config;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import utils.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,7 +19,7 @@ public class WebDriverManager {
     private WebDriverManager() {
     }
 
-    public static WebDriver getDriver(String browser) {
+    private static WebDriver getDriver(String browser) {
         if (driver != null) {
             return driver;
         }
@@ -25,10 +27,14 @@ public class WebDriverManager {
             case "chrome":
                 System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
                 driver = new ChromeDriver();
-                driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-                driver.manage().window().maximize();
+
+                break;
+            case "firefox":
+                driver = new FirefoxDriver();
                 break;
         }
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
         return driver;
     }
 

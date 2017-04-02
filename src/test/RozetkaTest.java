@@ -1,7 +1,7 @@
 package test;
 
 import POM.pages.SideBar;
-import configs.WebDriverManager;
+import utils.WebDriverManager;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import utils.DataBaseManager;
