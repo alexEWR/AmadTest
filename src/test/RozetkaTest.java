@@ -2,18 +2,20 @@ package test;
 
 import POM.pages.SideBar;
 import configs.WebDriverManager;
+import org.testng.Assert;
 import org.testng.annotations.*;
 import utils.DataBaseManager;
+import utils.Logger;
 
 /**
- * Created by Alex
+ * Created by Alex on 30.03.2017.
  */
 public class RozetkaTest {
     public static int RUN_ID;
 
     @BeforeClass
     public void beforeClass() {
-        System.out.println("before class");
+        Logger.INFO("Before class executing");
         RUN_ID = new DataBaseManager().getNewRunId();
 
         new SideBar()
@@ -21,28 +23,18 @@ public class RozetkaTest {
 
     }
 
-//    @BeforeMethod
-//    public void beforeTest() {
-//        System.out.println("Before Test");
-//
-//    }
-//
-//    @AfterMethod
-//    public void afterTest() {
-//    }
-
     @AfterClass
     public void afterClass() {
         WebDriverManager.close();
+        Logger.INFO("After class executed");
     }
 
 
-
     @Test
-    public void testListOfPopularSmartPhones(){
+    public void testListOfPopularSmartPhones() {
         new SideBar()
-                .clickTelefonyTvIElectronika()
-                .clickTelefonu()
+                .clickTelephonesTvAndElectronics()
+                .clickTelephones()
                 .clickSmartphones()
                 .setToDbTopSaleItemsNamesAndPrices(RUN_ID)
                 .openSecondPage()
@@ -50,6 +42,6 @@ public class RozetkaTest {
                 .openThirdPage()
                 .setToDbTopSaleItemsNamesAndPrices(RUN_ID);
 
-//        new DataBaseManager().printAllInDataBase();
+        Assert.assertTrue(true, "There can be your assert ");
     }
 }
