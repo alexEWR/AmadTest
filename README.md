@@ -11,7 +11,7 @@
 - Open terminal, navigate to project's folder, execute command **$mvn test** or **$mvn surefire:test**
 - Or you can execute it with CI, create Maven Job and add *clean* *test* to goals.
 
-Configuration file **ui_tests.xml** contains list of tests which will be started
+Configuration file **testng.xml** contains list of tests which will be started
 Configuration of enviroment and browser placed in src\configs\Config.class
 Configuration of Database connection placed in src\utils\DataBaseManager.class
 
