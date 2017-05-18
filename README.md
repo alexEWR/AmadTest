@@ -12,7 +12,9 @@
 - Or you can execute it with CI, create Maven Job and add *clean* *test* to goals.
 
 Configuration file **testng.xml** contains list of tests which will be started
+
 Configuration of enviroment and browser placed in src\configs\Config.class
+
 Configuration of Database connection placed in src\utils\DataBaseManager.class
 
 Report will be added to /target/surefire-reports/ 
