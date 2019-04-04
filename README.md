@@ -4,7 +4,7 @@
 3) Make pull request and share its link to QA team
 4) After positive response from reviewer, squash and merge request and delete branch.
 
-**#For running UI tests do the following steps:**
+**# For running UI tests do the following steps:**
 - Install java JDK 1.8 in your system and configurate global JAVA_HOME variable, on Mac execute command in terminal
 ```
 brew cask install java
